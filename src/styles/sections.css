@@ -1,0 +1,117 @@
+/* == [HERO] =================================================*/
+.hero {
+  text-align: center;
+  padding: 3.5rem 2rem;
+}
+
+.hero h1 {
+  font-size: 4rem;
+  font-weight: 800;
+  letter-spacing: -1.5px;
+  margin-bottom: 0.6rem;
+}
+
+.hero .sub {
+  font-size: 1.2rem;
+  color: var(--accent);
+  font-weight: 500;
+  margin-bottom: 1.75rem;
+}
+
+.hero .desc {
+  font-size: 1.2rem;
+  color: var(--text-secondary);
+  max-width: 540px;
+  margin: 0 auto;
+  line-height: 1.85;
+}
+
+/* == [ABOUT] =============================================== */
+.item {
+  border-left: 2px solid var(--accent);
+  padding-left: 1rem;
+}
+
+.item .label {
+  font-size: 0.65rem;
+  display: block;
+  margin-bottom: 0.4rem;
+}
+
+.item p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* == [SKILLS] =============================================== */
+.sub-label {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--text-secondary);
+  font-weight: 600;
+  margin-bottom: 0.6rem;
+}
+
+.sub-label:not(:first-child) {
+  margin-top: 1.25rem;
+}
+
+/* == [PROJECTS STATUS] =============================================== */
+.status {
+  text-align: center;
+  opacity: 0.6;
+  font-size: 0.95rem;
+  margin-bottom: 0.75rem;
+}
+.status.err {
+  color: #e05252;
+  opacity: 1;
+}
+
+/* == [CONTACT LINKS] ================================================= */
+.links {
+  display: flex;
+  justify-content: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.icon-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.4rem;
+  background: transparent;
+  border: none;
+  border-radius: 8px;
+}
+
+.icon-link img {
+  width: 25px;
+  height: 25px;
+  flex-shrink: 0;
+  filter: invert(25%) brightness(95%) contrast(90%);
+  transition: transform 0.3s;
+}
+
+[data-theme="dark"] .icon-link img {
+  filter: invert(85%) brightness(95%) contrast(90%);
+}
+
+.icon-link:hover img {
+  transform: translateY(-1.5px);
+}
+
+/* == [RESPONSIVE] == */
+@media (max-width: 768px) {
+  .hero {
+    padding: 4rem 1rem 2.5rem;
+  }
+  .hero h1 {
+    font-size: 2.8rem;
+  }
+  .hero .sub {
+    font-size: 1.05rem;
+  }
+}

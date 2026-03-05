@@ -1,22 +1,44 @@
+/* https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Selectors */
+/* == [THEMES] =============================================== */
+:root {
+  --bg-main: #f0f0f0;
+  --text-primary: #111111;
+  --text-secondary: #434343;
+  --border-color: #d1d1d1;
+  --accent: #2684ff;
+}
+
+[data-theme="dark"] {
+  --bg-main: #121212;
+  --text-primary: #eceef0;
+  --text-secondary: #c5c5c5;
+  --border-color: #333639;
+  --accent: #9382f3;
+}
+
+/* == [RESET] ================================================ */
 * {
-  margin: 0;
-  padding: 0;
+  margin: 6px 0 0 0;
   box-sizing: border-box;
+  font-family: "Inter", "Segoe UI", Arial, sans-serif;
 }
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-  line-height: 1.6;
+  background-color: var(--bg-main);
+  color: var(--text-primary);
   min-height: 100vh;
-  background-color: #f0f0f0;
-  color: #111;
+  padding-bottom: 4rem;
+  line-height: 1.6;
+  background-image: radial-gradient(var(--border-color) 1.2px, transparent 1.2px);
+  background-size: 28px 28px;
+  background-attachment: fixed;
+}
+
+h1, h2, h3 {
+  line-height: 1.2;
 }
 
 a {
   color: inherit;
   text-decoration: none;
-}
-
-h1, h2, h3 {
-  line-height: 1.2;
 }

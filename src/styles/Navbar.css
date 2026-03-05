@@ -1,0 +1,109 @@
+/* == [NAV] ================================================== */
+.nav {
+  position: relative;
+  z-index: 2;
+  padding: 1.25rem 1.5rem;
+  max-width: 860px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav p {
+  font-weight: 700;
+  font-size: 1.8rem;
+}
+
+/* == [SETTINGS BUTTON] ====================================== */
+.settings-container {
+  position: relative;
+}
+
+.settings-btn {
+  cursor: pointer;
+  padding: 0.5rem;
+  background: transparent;
+  border: none;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.settings-btn img {
+  width: 25px;
+  height: 25px;
+  transition: transform 0.3s;
+  filter: invert(25%) brightness(95%) contrast(90%);
+}
+
+[data-theme="dark"] .settings-btn img {
+  filter: invert(85%) brightness(95%) contrast(90%);
+}
+
+.settings-btn:hover img {
+  transform: rotate(45deg);
+}
+
+/* == [DROPDOWN] ============================================= */
+.settings-dropdown {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  margin-top: 0.5rem;
+  background-color: rgba(255, 255, 255, 0.45);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 12px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+  min-width: 160px;
+  z-index: 100;
+  overflow: hidden;
+}
+
+[data-theme="dark"] .settings-dropdown {
+  background-color: rgba(25, 25, 30, 0.5);
+  border-color: rgba(255, 255, 255, 0.06);
+}
+
+/* == [DROPDOWN ITEMS] ======================================= */
+.dropdown-item,
+.dropdown-checkbox {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  background: none;
+  border: none;
+  color: var(--text-primary);
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.dropdown-item {
+  text-align: left;
+}
+
+.dropdown-item:hover,
+.dropdown-checkbox:hover {
+  background-color: var(--bg-main);
+}
+
+.dropdown-checkbox {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.6rem;
+}
+
+.dropdown-checkbox input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  accent-color: var(--accent);
+  cursor: pointer;
+}
+
+.dropdown-checkbox span {
+  user-select: none;
+}
