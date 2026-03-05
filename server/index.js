@@ -3,13 +3,8 @@ require('dotenv').config();
 const app = require('express')();
 const { MongoClient } = require('mongodb');
 
-app.use(require('cors')({ 
-    origin: [
-        'http://localhost:5173', 
-        'https://nickcyran.github.io/',
-        'https://nickcyran.github.io/ICSI518/'
-    ] 
-}));
+app.use(cors());
+
 
 // == [ ROUTES ] ===============================================
 app.get('/api/projects', async (_req, res) => {
