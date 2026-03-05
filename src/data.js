@@ -5,15 +5,27 @@ export const aboutItems = [
     },
     {
         label: 'Background',
-        text: 'Experience in graphics programming, shader development, and systems. I build interactive systems that combine mathematics and visual design.'
+        text: 'Experience in Object Oriented programming principles, systems, and shader developement.',
     },
     {
         label: 'Career Goals',
-        text: 'Creating high-performance interactive systems that combine graphics, simulation, and modern web technologies.'
+        text: 'Creating interactive systems that combine artistic expression and code through graphics.'
     }
 ]
 
 export const skills = ['Java', 'C#', 'C', 'glsl', 'Python', 'GDscript', 'JavaScript', 'HTML', 'CSS']
+
+export const researchInterests = [
+    {
+        label: 'Existing Work',
+        text: 'Creating projects across the stack, from low-level systems to GLSL shaders and React web apps.'
+    },
+    {
+        label: 'Future Interests',
+        text: 'Exploring advanced graphics programming, real-time rendering techniques,'
+            + ' and expressive shader development.'
+    }
+];
 
 export const tools = ['Git', 'Linux', 'React.js', 'Node.js', 'Unity', 'Godot', 'Three.js']
 

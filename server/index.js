@@ -9,12 +9,12 @@ app.use(cors());
 // == [ ROUTES ] ===============================================
 app.get('/api/projects', async (_req, res) => {
     try {
-        const client = await MongoClient.connect(process.env.MONGO_URI); 
+        const client = await MongoClient.connect(process.env.MONGO_URI);
 
         const projects = await client.db()      // default db from URI
             .collection('projects')             // target collection
             .find()                             // fetch all docs
-            .toArray();                         
+            .toArray();
         res.json(projects);
     } catch {
         res.status(500).json({ error: 'Failed to fetch projects' });

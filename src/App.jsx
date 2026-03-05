@@ -7,6 +7,7 @@ import './styles/form.css'
 import ShaderCanvas from './components/ShaderCanvas'
 import Navbar from './components/Navbar'
 import About from './components/About'
+import Research from './components/Research'
 import Projects from './components/Projects'
 import Contact from './components/Contact'
 
@@ -42,6 +43,7 @@ function App() {
       {showContent && (
         <main className="wrap">
           <About />
+          <Research />
           <Projects />
           <Contact />
         </main>

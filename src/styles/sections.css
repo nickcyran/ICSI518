@@ -33,9 +33,11 @@
 }
 
 .item .label {
-  font-size: 0.65rem;
+  font-size: 0.8rem;
+  font-weight: 600;
   display: block;
   margin-bottom: 0.4rem;
+  margin-top: -0.5rem;
 }
 
 .item p {
