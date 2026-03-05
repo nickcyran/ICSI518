@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react'
 import { Section, Card, TagList } from './Common'
 
 const API_URL = import.meta.env.PROD
-    ? 'https://icsi518.onrender.com'
+    ? import.meta.env.VITE_PROD_API_URL
     : import.meta.env.VITE_API_URL;
 
 export default function Projects() {
