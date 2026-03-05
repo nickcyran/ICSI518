@@ -25,8 +25,15 @@ export default function Projects() {
     return (
         <Section title="Projects">
             {/* status messages */}
-            {loading && <p className="status">Loading projects...</p>}
-            {error && <p className="status err">Failed to load: {error}</p>}
+            {loading && (
+                <Card>
+                    <p className="status">Loading projects…</p>
+                    <p className="status-disclaimer">
+                        This site uses Render's free tier. If the server is sleeping, it may take up to a minute to wake up.
+                    </p>
+                </Card>
+            )}
+            {error && <Card><p className="status err">Failed to load: {error}</p></Card>}
 
             {/* display project as a card with title, description, and tags */}
             <div className="grid-2">

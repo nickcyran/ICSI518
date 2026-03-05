@@ -71,6 +71,12 @@
   opacity: 1;
 }
 
+.status-disclaimer {
+  text-align: center;
+  opacity: 45%;
+  font-size: 0.85rem;
+}
+
 /* == [CONTACT LINKS] ================================================= */
 .links {
   display: flex;
