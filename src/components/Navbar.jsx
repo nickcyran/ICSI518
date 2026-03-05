@@ -6,10 +6,15 @@ export default function Navbar({ toggleTheme, showShader, setShowShader, showCon
     const [isOpen, setIsOpen] = useState(false);
     const ref = useRef(null);
 
+    // close the settings menu when clicking outside 
     useEffect(() => {
-        const handler = (e) => ref.current?.contains(e.target) || setIsOpen(false);
-        document.addEventListener('mousedown', handler);
-        return () => document.removeEventListener('mousedown', handler);
+        function handleClickOutside(e) {
+            if (!ref.current?.contains(e.target)) {
+                setIsOpen(false);
+            }
+        }
+        document.addEventListener('mousedown', handleClickOutside);
+        return () => document.removeEventListener('mousedown', handleClickOutside);
     }, []);
 
     // checkmark toggles to include
@@ -31,10 +36,16 @@ export default function Navbar({ toggleTheme, showShader, setShowShader, showCon
                 {isOpen && (
                     <div className="settings-dropdown">
                         <button className="dropdown-item" onClick={toggleTheme}>Toggle Theme</button>
+
+                        {/* checkboxes for selectively rendering content */}
                         {toggles.map(([label, state, set]) => (
                             <label key={label} className="dropdown-checkbox">
                                 <span>{label}</span>
-                                <input type="checkbox" checked={state} onChange={e => set(e.target.checked)} />
+                                <input
+                                    type="checkbox"
+                                    checked={state}
+                                    onChange={e => set(e.target.checked)}
+                                />
                             </label>
                         ))}
                     </div>
