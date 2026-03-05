@@ -51,3 +51,13 @@ The server runs on `http://localhost:5000` and connects to MongoDB to serve proj
 | Express | HTTP server that exposes the `/api/projects` route |
 | cors | Allows the Vite dev server to call the API |
 | dotenv | Loads environment variables from `.env` |
+
+---
+## Deployment
+
+### Frontend (GitHub Pages)
+The frontend is static and deployed to GitHub Pages. The scrip `npm run deploy` builds and deploys it.
+
+### Backend (Render)
+The Express server is deployed via Render as a web service. It connects to the MongoDB cluster and sends project data. 
+
