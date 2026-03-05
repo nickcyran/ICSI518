@@ -12,7 +12,7 @@ Software developers applying for jobs need to have a way to show off their perso
 
 > ###  [IMPORTANT]
 > **DB and email functionality may not work when testing locally.** The `.env` file containing API keys and the MongoDB connection string is not included in this repository as I do not feel comfortable including them.
-
+---
 ## Frontend
 
 ```bash
