@@ -4,7 +4,11 @@ const app = require('express')();
 const { MongoClient } = require('mongodb');
 
 app.use(require('cors')({ 
-    origin: ['http://localhost:5173', 'https://nickcyran.github.io/ICSI518/'] 
+    origin: [
+        'http://localhost:5173', 
+        'https://nickcyran.github.io/',
+        'https://nickcyran.github.io/ICSI518/'
+    ] 
 }));
 
 // == [ ROUTES ] ===============================================
