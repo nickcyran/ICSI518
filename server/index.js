@@ -1,10 +1,10 @@
 // == [ CONFIG ] ===============================================
 require('dotenv').config();
+const cors = require('cors');
 const app = require('express')();
 const { MongoClient } = require('mongodb');
 
 app.use(cors());
-
 
 // == [ ROUTES ] ===============================================
 app.get('/api/projects', async (_req, res) => {
